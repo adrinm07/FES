@@ -59,3 +59,12 @@ else:
 # de comunicacions. Indica si el nivell és crític (menys del 20 %), baix
 # (del 20 % al 49 %) o suficient (50 % o més). Rebutja valors fora del rang
 # del 0 % al 100 %.
+sai = int(input("Exercici 5: Posa el percentatge de bateria disponible al SAI: "))
+if 0 <= sai < 20:
+    print("Nivell crític")
+elif 20 <= sai <= 49:
+    print("Nivell baix")
+elif 50 <= sai <= 100:
+    print("Nivell suficient")
+else:
+    print("Fora de rang")
