@@ -42,9 +42,18 @@ print(f"Exercici 4: Llista duplicada: {llista2}")
 # Exercici 5: Extreure l'element central
 # Donada una llista amb un nombre senar d'elements, extreu-ne l'element central
 # fent servir slicing.
-# Exemple: llista = [10, 20, 30, 40, 50] -> L'element central és 30
+llista3 = [10, 20, 30, 40, 50]
+index_cental = int(len(llista3)/2)
+print(f"Exercici5: Element central: {llista3[index_cental]}")
 
 # Exercici 6: Inversió parcial
 # Donada una llista, inverteix-ne només la primera meitat (fent servir slicing
 # i concatenació).
-# Exemple: llista = [1, 2, 3, 4, 5, 6] -> Resultat: [3, 2, 1, 4, 5, 6]
+llista4 = [1, 2, 3, 4, 5, 6] #Resultat: [3, 2, 1, 4, 5, 6]
+len_half_llista4 = int(len(llista4)/2)
+llista5 = llista4[:len_half_llista4]
+num2 = llista5[0]
+llista5[0] = llista5[len(llista5)-1]
+llista5[len(llista5)-1] = num2
+llista5 = llista5 + llista4[len_half_llista4:]
+print(f"Exercici 6: Llista resultant: {llista5}")
