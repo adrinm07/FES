@@ -134,7 +134,7 @@ print(f"{num} nums de fibo: {fibo}")
 # Després de cada intent incorrecte, indica si el número secret és més gran o més petit.
 
 num_secret = 7
-num = int(input("Exercici 9: Introdueix numero: "))
+num = int(input("Exercici 10: Introdueix numero: "))
 
 while num != num_secret:
     if num_secret < num:
