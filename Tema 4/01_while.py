@@ -66,23 +66,80 @@ while i <= 10:
 # Imprimeix tots els números primers menors o iguals que N fent servir un bucle while.
 # Un número és primer si només és divisible per 1 i per ell mateix.
 
+num = int(input("Exercici 6: Introdueix un enter positiu: "))
+i = 2
+while i <= num:
+    primer = True
+    j = 2
+    while j*j <= i:
+        if i % j == 0:
+            primer = False
+            break
+        j += 1
+    if primer == True:
+        print(i)
+    i += 1
+
 # Exercici 7: Suma fins al zero
 # Demana a l'usuari que introdueixi números enters.
 # Ves sumant els números introduïts fins que l'usuari introdueixi el 0.
 # Al final, imprimeix la suma total. El 0 només serveix per acabar i no s'ha de sumar.
+
+suma = 0
+num = 1
+print("Exercici 7:")
+while num:
+    num = int(input("Ves introduïnt nombres: "))
+    if num == 0:
+        break
+    else:
+        suma += num
+print(f"Suma = {suma}")
 
 # Exercici 8: Comptar les xifres d'un número
 # Demana a l'usuari que introdueixi un número enter positiu.
 # Comptabilitza quantes xifres té fent servir un bucle while.
 # Finalment, imprimeix el nombre de xifres.
 
+num = int(input("Exercici 8: Entra un num positiu: "))
+xifres = 1
+while True:
+    if int(num / 10) == 0:
+        break
+    else:
+        num = int(num / 10)
+        xifres += 1
+print(f"Xifres = {xifres}")
+
 # Exercici 9: Seqüència de Fibonacci
 # Demana a l'usuari quants termes de la seqüència de Fibonacci vol veure.
 # Imprimeix aquest nombre de termes fent servir un bucle while.
 # La seqüència comença per 0 i 1; cada terme següent és la suma dels dos anteriors.
+
+num = int(input("Exercici 9: Introdueix quant nums de Fibo vols veure: "))
+i = 2
+fibo_Actual = 0
+fibo = [0,1]
+while i <= num:
+    fibo_Actual = fibo[i-1] + fibo[i-2]
+    fibo.append(fibo_Actual)
+    i +=1
+print(f"{num} nums de fibo: {fibo}")
+
 
 # Exercici 10: Joc d'endevinar el número
 # El número secret és el 7.
 # Demana a l'usuari que provi d'endevinar-lo i continua demanant números amb un bucle while
 # fins que l'encerti.
 # Després de cada intent incorrecte, indica si el número secret és més gran o més petit.
+
+num_secret = 7
+num = int(input("Exercici 9: Introdueix numero: "))
+
+while num != num_secret:
+    if num_secret < num:
+        print("El numero secret és més petit")
+    else:
+        print("El numero secret és més gran")
+    num = int(input("Introdueix numero: "))
+print("L'has encertat!")
