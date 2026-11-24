@@ -1,0 +1,4 @@
+Nombre de lectures: 4
+nMin: 18.5 ºC
+nMax: 27.3 ºC
+Mitjana: 23.0 ºC
