@@ -47,7 +47,7 @@ dades = {"T1": [20.0, 22.0], "T2": [18.0], "T3": []}
 mitjanes = {}
 for clau, valor in dades.items():
     mitjanes[clau] = mitjana(valor)
-print(f"Exercici 3: mitjanes: {dades}")
+print(f"Exercici 3: mitjanes: {mitjanes}")
 
 # Exercici 4 - Repte opcional. Un programa reutilitzable
 # Defineix informe_sensor(nom, lectures) que retorni un diccionari amb
